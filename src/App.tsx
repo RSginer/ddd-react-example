@@ -1,4 +1,4 @@
-import { CarsTable } from "./lib/Car/app/components/CarsTable.component"
+import { CarsTable } from "./Car/app/components/CarsTable.component"
 
 function App() {
   return (<>
