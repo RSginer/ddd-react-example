@@ -5,15 +5,21 @@ import {
   RouterProvider,
 } from "react-router-dom";
 
+import { CarsPage } from '@Car/Feature';
+import { ContainerContext, createDIContainer } from '@Shared/Infrastructure';
+
 import './index.css';
+
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <div>Hello world!</div>,
+    element: <CarsPage />,
   },
 ]);
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <ContainerContext.Provider value={createDIContainer()}>
+      <RouterProvider router={router} />
+    </ContainerContext.Provider>
   </React.StrictMode>,
 )
