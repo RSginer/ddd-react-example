@@ -1,4 +1,4 @@
-import { Car } from "../model/Car";
+import { Car } from '@Car/Domain';
 
 export interface UpdateCarRepository {
     updateCar: (car: Car) => Car;

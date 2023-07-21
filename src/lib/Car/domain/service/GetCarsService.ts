@@ -1,4 +1,4 @@
-import { GetCarsRepository } from "@Car/Domain";
+import { GetCarsRepository } from '@Car/Domain';
 
 export class GetCarsService {
     constructor(

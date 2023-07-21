@@ -1,5 +1,4 @@
-import { Car } from "../model/Car";
-import { UpdateCarRepository } from "../repository/UpdateCarRepository";
+import { Car, UpdateCarRepository } from '@Car/Domain';
 
 export class UpdateCarService {
     constructor(

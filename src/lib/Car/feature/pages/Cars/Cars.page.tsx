@@ -1,7 +1,8 @@
-import { CarsTable } from "@Car/Ui";
-import { ContainerContext, GET_CARS_SERVICE } from "@Shared/Infrastructure";
-import { Header } from "@Shared/Ui";
-import { useContext } from "react";
+import { useContext } from 'react';
+
+import { CarsTable } from '@Car/Feature';
+import { ContainerContext, GET_CARS_SERVICE } from '@Shared/Infrastructure';
+import { Header } from '@Shared/Ui';
 
 export const CarsPage = () => {
     const containerCtx = useContext(ContainerContext);

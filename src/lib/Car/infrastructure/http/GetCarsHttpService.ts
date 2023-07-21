@@ -1,6 +1,4 @@
-import { Car } from "../../domain/model/Car";
-import { GetCarsRepository } from "../../domain/repository/GetCarsRepository";
-
+import { Car, GetCarsRepository } from '@Car/Domain';
 
 export class GetCarsHttpService implements GetCarsRepository {
     getCars = (): Car[] => ([{

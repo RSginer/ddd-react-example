@@ -1,4 +1,4 @@
-import { Car } from "../model/Car";
+import { Car } from '@Car/Domain';
 
 export interface GetCarsRepository {
     getCars: () => Car[];
