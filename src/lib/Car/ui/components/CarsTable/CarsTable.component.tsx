@@ -1,7 +1,7 @@
 import { Car } from '@Car/Domain';
 
-import { CarsTableCell } from './components/CarTableCell/CarTableCell.component';
-import { CarsTableHeader } from './components/CarTableHeader/CarTableHeader.component';
+import { CarsTableCell } from './components/CarsTableCell/CarsTableCell.component';
+import { CarsTableHeader } from './components/CarsTableHeader/CarsTableHeader.component';
 
 interface CarsTableProps {
   cars: Car[];
@@ -12,7 +12,7 @@ export const CarsTable = ({ cars }: CarsTableProps) => (
     <CarsTableHeader prop={'ID'} />
     <CarsTableHeader prop={'NAME'} />
     <CarsTableHeader prop={'BRAND'} />
-    <CarsTableHeader prop={'IMG'} />
+    <CarsTableHeader prop={'IMAGE'} />
 
     {cars.map((car) => (
       <>
