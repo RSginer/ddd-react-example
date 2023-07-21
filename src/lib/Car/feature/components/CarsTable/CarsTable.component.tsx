@@ -1,12 +1,7 @@
 import { Car } from '@Car/Domain';
 
-interface CarsTableCellProps {
-  prop: string;
-}
-
-export const CarsTableCell = ({ prop }: CarsTableCellProps) => (
-  <div className="flex items-center justify-center">{prop}</div>
-);
+import { CarsTableCell } from './components/CarTableCell/CarTableCell.component';
+import { CarsTableHeader } from './components/CarTableHeader/CarTableHeader.component';
 
 interface CarsTableProps {
   cars: Car[];
@@ -14,10 +9,10 @@ interface CarsTableProps {
 
 export const CarsTable = ({ cars }: CarsTableProps) => (
   <div className="grid grid-cols-4 gap-3">
-    <CarsTableCell prop={'ID'} />
-    <CarsTableCell prop={'NAME'} />
-    <CarsTableCell prop={'BRAND'} />
-    <CarsTableCell prop={'IMG'} />
+    <CarsTableHeader prop={'ID'} />
+    <CarsTableHeader prop={'NAME'} />
+    <CarsTableHeader prop={'BRAND'} />
+    <CarsTableHeader prop={'IMG'} />
 
     {cars.map((car) => (
       <>
