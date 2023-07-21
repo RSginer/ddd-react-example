@@ -7,11 +7,7 @@ import { Header } from '@Shared/Ui';
 export const CarsPage = () => {
     const containerCtx = useContext(ContainerContext);
     const getCarsService = containerCtx.resolve(GET_CARS_SERVICE);
-    
-    getCarsService.getCars().then((cars) => {
-        console.log(cars);
-    }).catch((err) => console.error(err));
-    
+
     return <>
         <Header />
         <CarsTable />
