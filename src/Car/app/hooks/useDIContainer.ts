@@ -1,4 +1,4 @@
-import { createDIContainer } from "../../infrastructure/di";
+import { createDIContainer } from "../../../Shared/infrastructure/di";
 
 const container = createDIContainer();
 

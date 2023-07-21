@@ -1,9 +1,9 @@
 import { asValue, createContainer } from 'awilix';
 
-import { GetCarsService } from '../domain/service/GetCarsService.ts';
-import { UpdateCarService } from '../domain/service/UpdateCarService.ts';
-import { GetCarsHttpService } from './http/GetCarsHttpService.ts';
-import { UpdateCarHttpService } from './http/UpdateCarHttpService.ts';
+import { GetCarsService } from '../../Car/domain/service/GetCarsService.ts';
+import { UpdateCarService } from '../../Car/domain/service/UpdateCarService.ts';
+import { GetCarsHttpService } from '../../Car/infrastructure/http/GetCarsHttpService.ts';
+import { UpdateCarHttpService } from '../../Car/infrastructure/http/UpdateCarHttpService.ts';
 
 export const createDIContainer = () => {
     const container = createContainer()
