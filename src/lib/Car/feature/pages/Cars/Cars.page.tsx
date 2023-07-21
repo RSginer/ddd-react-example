@@ -1,15 +1,14 @@
 import { CarsTable, useGetCars } from '@Car/Feature';
-import { Header } from '@Shared/Ui';
+import { Header, PageContainer } from '@Shared/Ui';
 
 export const CarsPage = () => {
   const { isLoading, error, data: cars } = useGetCars();
 
   return (
-    <>
-      <Header />
-      {!isLoading && error && <p>Error: {JSON.stringify(error)}</p>}
+    <PageContainer header={<Header />}>
       {isLoading && <p>Loading...</p>}
+      {error !== null && !isLoading && <p>Error: {JSON.stringify(error)}</p>}
       {cars && !isLoading && !error && <CarsTable cars={cars} />}
-    </>
+    </PageContainer>
   );
 };

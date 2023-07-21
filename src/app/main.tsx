@@ -19,10 +19,10 @@ const queryClient = new QueryClient();
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
-    <QueryClientProvider client={queryClient}>
-      <ContainerContext.Provider value={createDIContainer()}>
+    <ContainerContext.Provider value={createDIContainer()}>
+      <QueryClientProvider client={queryClient}>
         <RouterProvider router={router} />
-      </ContainerContext.Provider>
-    </QueryClientProvider>
+      </QueryClientProvider>
+    </ContainerContext.Provider>
   </React.StrictMode>,
 );
