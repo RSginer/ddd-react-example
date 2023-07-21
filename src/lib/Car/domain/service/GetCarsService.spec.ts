@@ -1,10 +1,10 @@
-import { Car, GetCarsService } from '@Car/Domain';
+import { describe, expect, it, vi } from 'vitest';
 
-import { GetCarsRepository } from '../';
+import { Car, GetCarsRepository, GetCarsService } from '@Car/Domain';
 
 const mockedCars: Car[] = [{ id: '', name: 'mock', brand: 'mock', pictureUrl: 'http://mock.io' }];
 
-const getCarsMock: jest.Mock<Promise<Car[]>> = jest.fn(() => Promise.resolve(mockedCars));
+const getCarsMock = vi.fn(() => Promise.resolve(mockedCars));
 
 class GetCarsMockService implements GetCarsRepository {
   getCars = getCarsMock;
