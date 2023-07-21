@@ -1,5 +1,6 @@
 import { CarsTable } from "@Car/Ui";
 import { ContainerContext, GET_CARS_SERVICE } from "@Shared/Infrastructure";
+import { Header } from "@Shared/Ui";
 import { useContext } from "react";
 
 export const CarsPage = () => {
@@ -9,6 +10,7 @@ export const CarsPage = () => {
     console.log(getCarsService.getCars());
     
     return <>
+        <Header />
         <CarsTable />
     </>
 }

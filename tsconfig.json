@@ -11,7 +11,8 @@
       "@Car/Feature": ["lib/Car/feature"],
       "@Car/Ui": ["lib/Car/ui"],
       "@Car/Infrastructure": ["lib/Car/infrastructure"],
-      "@Shared/Infrastructure": ["lib/Shared/infrastructure"]
+      "@Shared/Infrastructure": ["lib/Shared/infrastructure"],
+      "@Shared/Ui": ["lib/Shared/ui"]
     },
     /* Bundler mode */
     "moduleResolution": "bundler",

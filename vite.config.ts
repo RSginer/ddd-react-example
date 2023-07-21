@@ -10,6 +10,7 @@ export default defineConfig({
       '@Car/Domain': path.resolve(__dirname, './src/lib/Car/domain'),
       '@Car/Infrastructure': path.resolve(__dirname, './src/lib/Car/infrastructure'),
       '@Shared/Infrastructure': path.resolve(__dirname, './src/lib/Shared/infrastructure'),
+      '@Shared/Ui': path.resolve(__dirname, './src/lib/Shared/ui'),
     },
   },
 
