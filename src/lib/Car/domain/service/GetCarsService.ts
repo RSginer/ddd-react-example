@@ -1,11 +1,9 @@
-import { GetCarsRepository } from '@Car/Domain';
+import { Car, GetCarsRepository } from '@Car/Domain';
 
 export class GetCarsService {
-    constructor(
-      private carsGetter: GetCarsRepository
-    ){}
+  constructor(private carsGetter: GetCarsRepository) {}
 
-    getCars() {
-      return this.carsGetter.getCars();
-    }
+  getCars(): Promise<Car[]> {
+    return this.carsGetter.getCars();
+  }
 }
