@@ -2,21 +2,27 @@ import './index.css';
 
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import { QueryClient, QueryClientProvider } from 'react-query';
+import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 
 import { CarsPage } from '@Car/Feature';
 import { ContainerContext, createDIContainer } from '@Shared/Infrastructure';
 
 const router = createBrowserRouter([
   {
-    path: "/",
+    path: '/',
     element: <CarsPage />,
   },
 ]);
+
+const queryClient = new QueryClient();
+
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
-    <ContainerContext.Provider value={createDIContainer()}>
-      <RouterProvider router={router} />
-    </ContainerContext.Provider>
+    <QueryClientProvider client={queryClient}>
+      <ContainerContext.Provider value={createDIContainer()}>
+        <RouterProvider router={router} />
+      </ContainerContext.Provider>
+    </QueryClientProvider>
   </React.StrictMode>,
-)
+);

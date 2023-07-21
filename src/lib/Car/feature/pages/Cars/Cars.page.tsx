@@ -1,28 +1,17 @@
-import { useContext, useEffect, useState } from 'react';
-
-import { Car } from '@Car/Domain';
 import { CarsTable } from '@Car/Feature';
-import { ContainerContext, GET_CARS_SERVICE } from '@Shared/Infrastructure';
 import { Header } from '@Shared/Ui';
 
-export const CarsPage = () => {
-  const containerCtx = useContext(ContainerContext);
-  const getCarsService = containerCtx.resolve(GET_CARS_SERVICE);
-  const [cars, setCars] = useState<Car[]>();
+import { useCars } from '../../hooks/useCars';
 
-  useEffect(() => {
-    getCarsService
-      .getCars()
-      .then((cars) => {
-        setCars(cars);
-      })
-      .catch((err) => console.log(err));
-  }, [getCarsService]);
+export const CarsPage = () => {
+  const { isLoading, error, data: cars } = useCars();
 
   return (
     <>
       <Header />
-      <CarsTable cars={cars ?? []} />
+      {!isLoading && error && <p>Error: {JSON.stringify(error)}</p>}
+      {isLoading && <p>Loading...</p>}
+      {cars && !isLoading && !error && <CarsTable cars={cars} />}
     </>
   );
 };

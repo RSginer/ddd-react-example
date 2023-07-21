@@ -7,7 +7,7 @@ interface CarsTableProps {
 export const CarsTable = ({ cars }: CarsTableProps) => (
   <div>
     {cars.map((car) => (
-      <p>{car.name}</p>
+      <p key={JSON.stringify(car)}>{car.name}</p>
     ))}
   </div>
 );
