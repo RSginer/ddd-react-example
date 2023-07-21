@@ -1,7 +1,5 @@
-import { CarsTable } from '@Car/Feature';
+import { CarsTable, useCars } from '@Car/Feature';
 import { Header } from '@Shared/Ui';
-
-import { useCars } from '../../hooks/useCars';
 
 export const CarsPage = () => {
   const { isLoading, error, data: cars } = useCars();
