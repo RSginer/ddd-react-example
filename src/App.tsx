@@ -1,4 +1,4 @@
-import { CarsPage } from "./Car/app/pages/Cars.page";
+import { CarsPage } from "./lib/Car/app/pages/Cars.page";
 
 function App() {
   return (<>
