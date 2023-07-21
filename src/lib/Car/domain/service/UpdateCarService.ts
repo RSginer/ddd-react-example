@@ -1,7 +1,12 @@
+import { Car } from "../model/Car";
 import { UpdateCarRepository } from "../repository/UpdateCarRepository";
 
 export class UpdateCarService {
     constructor(
-        public carUpdatter: UpdateCarRepository
+        private carUpdatter: UpdateCarRepository
     ) {}
+
+    updateCar(car: Car) {
+        return this.carUpdatter.updateCar(car);
+    }
 }
