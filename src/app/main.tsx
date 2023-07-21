@@ -1,14 +1,11 @@
+import './index.css';
+
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import {
-  createBrowserRouter,
-  RouterProvider,
-} from "react-router-dom";
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
 import { CarsPage } from '@Car/Feature';
 import { ContainerContext, createDIContainer } from '@Shared/Infrastructure';
-
-import './index.css';
 
 const router = createBrowserRouter([
   {

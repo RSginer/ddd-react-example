@@ -1,5 +1,5 @@
 import { Car } from '@Car/Domain';
 
 export interface UpdateCarRepository {
-    updateCar: (car: Car) => Car;
+    updateCar: (car: Car) => Promise<Car>;
 }
