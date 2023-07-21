@@ -1,4 +1,5 @@
-import { CarsTable, useGetCars } from '@Car/Feature';
+import { useGetCars } from '@Car/Feature';
+import { CarsTable } from '@Car/Ui';
 import { Header, PageContainer } from '@Shared/Ui';
 
 export const CarsPage = () => {
