@@ -12,7 +12,14 @@ interface UseGetCarsProps {
   };
 }
 
-export const useGetCars = ({ searchQuery, sort }: UseGetCarsProps) => {
+export interface UseGetCarsResult {
+  isLoading: boolean;
+  error: unknown;
+  data: Car[];
+  queryKey: string;
+}
+
+export const useGetCars = ({ searchQuery, sort }: UseGetCarsProps): UseGetCarsResult => {
   const QUERY_KEY = 'getCars';
   const containerCtx = useContext(ContainerContext);
   const getCarsService = containerCtx.resolve(GET_CARS_SERVICE);
