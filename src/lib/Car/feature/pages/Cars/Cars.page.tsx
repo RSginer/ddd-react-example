@@ -1,15 +1,12 @@
-import { ChangeEvent, useState } from 'react';
+import { ChangeEvent } from 'react';
 
 import { Car } from '@Car/Domain';
-import { useGetCars, useSearch } from '@Car/Feature';
+import { useGetCars, useSearch, useSort } from '@Car/Feature';
 import { CarsTable, InputSearch, SortSelect } from '@Car/Ui';
 import { Error, Header, Loader, PageContainer } from '@Shared/Ui';
 
 export const CarsPage = () => {
-  const [sort, setSort] = useState<{
-    property: keyof Car;
-    order: 'asc' | 'desc';
-  }>({ property: 'regNumber', order: 'asc' });
+  const { sort, setSort } = useSort();
   const { debouncedSearchQuery, searchQuery } = useSearch();
   const { isLoading, error, data: cars } = useGetCars({ searchQuery, sort });
 
