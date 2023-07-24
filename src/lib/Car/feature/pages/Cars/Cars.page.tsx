@@ -21,6 +21,13 @@ export const CarsPage = () => {
       {cars && !isLoading && !error && (
         <>
           <InputSearch />
+          <div className="flex mb-4">
+            <label htmlFor="sort">Sort by:</label>
+            <select id="sort" title="Sort by">
+              <option>Reg Number</option>
+              <option>Model</option>
+            </select>
+          </div>
           <CarsTable onHeaderClick={onHeaderClick} headerLabels={headerLabels} cars={cars} />
         </>
       )}
