@@ -1,4 +1,5 @@
-import { ChangeEvent, useState } from 'react';
+import debounce from 'lodash.debounce';
+import { ChangeEvent, useEffect, useState } from 'react';
 
 import { useGetCars } from '@Car/Feature';
 import { CarsTable, InputSearch, SortSelect } from '@Car/Ui';
@@ -8,12 +9,19 @@ import { headerLabels } from './headerLabels.const';
 
 export const CarsPage = () => {
   const [searchQuery, setSearchQuery] = useState<string>();
-  const { isLoading, error, data: cars } = useGetCars({ searchQuery });
+  const [debouncedSearchQuery] = useState(() => debounce(setSearchQuery, 500));
 
+  const { isLoading, error, data: cars } = useGetCars({ searchQuery });
   const onInputSearchChange = (ev: ChangeEvent<HTMLInputElement>) => {
     const value = ev.target.value;
-    setSearchQuery(value);
+    debouncedSearchQuery(value);
   };
+
+  useEffect(() => {
+    return () => {
+      debouncedSearchQuery.cancel();
+    };
+  }, [debouncedSearchQuery]);
 
   return (
     <PageContainer header={<Header />}>
