@@ -1,5 +1,5 @@
 import { Car } from '@Car/Domain';
 
 export interface GetCarsRepository {
-  getCars: () => Promise<Car[]>;
+  getCars: (searchQuery?: string) => Promise<Car[]>;
 }
