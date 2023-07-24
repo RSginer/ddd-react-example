@@ -10,18 +10,18 @@ import { headerLabels } from './headerLabels.const';
 export const CarsPage = () => {
   const [searchQuery, setSearchQuery] = useState<string>();
   const [debouncedSearchQuery] = useState(() => debounce(setSearchQuery, 500));
-
   const { isLoading, error, data: cars } = useGetCars({ searchQuery });
-  const onInputSearchChange = (ev: ChangeEvent<HTMLInputElement>) => {
-    const value = ev.target.value;
-    debouncedSearchQuery(value);
-  };
 
   useEffect(() => {
     return () => {
       debouncedSearchQuery.cancel();
     };
   }, [debouncedSearchQuery]);
+
+  const onInputSearchChange = (ev: ChangeEvent<HTMLInputElement>) => {
+    const value = ev.target.value;
+    debouncedSearchQuery(value);
+  };
 
   return (
     <PageContainer header={<Header />}>
