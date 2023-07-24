@@ -6,7 +6,7 @@ interface SortSelectProps {
 }
 
 export const SortSelect = ({ onSortPropertyChange, onSortOrderChange }: SortSelectProps) => (
-  <div className="flex gap-4">
+  <div className="flex gap-4 ml-1">
     <div className="flex mb-4 cursor-pointer">
       <label className="underline mr-1" htmlFor="sort">
         Sort by:
