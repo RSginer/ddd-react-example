@@ -1,10 +1,8 @@
 import { ChangeEvent } from 'react';
 
-import { useGetCars } from '@Car/Feature';
+import { useGetCars, useSearch } from '@Car/Feature';
 import { CarsTable, InputSearch, SortSelect } from '@Car/Ui';
 import { Header, Loader, PageContainer } from '@Shared/Ui';
-
-import { useSearch } from '../../hooks/useSearch.hook';
 
 export const CarsPage = () => {
   const { debouncedSearchQuery, searchQuery } = useSearch();
