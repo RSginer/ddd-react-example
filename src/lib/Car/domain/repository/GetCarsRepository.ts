@@ -5,7 +5,7 @@ export interface GetCarsRepository {
     searchQuery?: string,
     sort?: {
       order: 'asc' | 'desc';
-      property: string;
+      property: keyof Car;
     },
   ) => Promise<Car[]>;
 }

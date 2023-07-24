@@ -7,7 +7,7 @@ export class GetCarsHttpService implements GetCarsRepository {
     searchQuery?: string,
     sort?: {
       order: 'asc' | 'desc';
-      property: string;
+      property: keyof Car;
     },
   ): Promise<Car[]> => {
     const url = new URL(`${this.apiUrl}/cars`);
