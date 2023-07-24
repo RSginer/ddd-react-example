@@ -13,31 +13,36 @@ interface CarsTableProps {
 }
 
 export const CarsTable = ({ cars, headerLabels, onHeaderClick }: CarsTableProps) => (
-  <div className="grid grid-cols-5 gap-3">
-    {headerLabels.map((headerLabel) => (
-      <div
-        className={`${headerLabel.isClickable ? 'cursor-pointer' : 'cursor-default'}`}
-        onClick={
-          headerLabel.isClickable && headerLabel.property
-            ? (ev: MouseEvent) => headerLabel.property && onHeaderClick(ev, headerLabel.property)
-            : undefined
-        }
-      >
-        <CarsTableHeader label={headerLabel.label} />
-      </div>
-    ))}
+  <div className="grid gap-y-2">
+    <div className="lg:grid lg:grid-cols-10 gap-3 mb-3 hidden">
+      {headerLabels.map((headerLabel) => (
+        <div
+          className={`${headerLabel.isClickable ? 'cursor-pointer' : 'cursor-default'}  lg:block col-span-${
+            headerLabel.colSpan
+          }`}
+          onClick={
+            headerLabel.isClickable && headerLabel.property
+              ? (ev: MouseEvent) => headerLabel.property && onHeaderClick(ev, headerLabel.property)
+              : undefined
+          }
+        >
+          <CarsTableHeader label={headerLabel.label} />
+        </div>
+      ))}
+    </div>
+
     {cars.map((car) => (
-      <div className="grid grid-cols-5 col-span-5 gap-3" key={car.id}>
-        <div>
+      <div className="grid lg:grid-cols-10 gap-3" key={car.id}>
+        <div className="flex items-center justify-center col-span-2 lg:col-span-3">
           <img src={car.pictureUrl} alt={car.name} />
         </div>
         <CarsTableCell label={car.regNumber} />
         <CarsTableCell label={car.name} />
         <CarsTableCell label={car.brand} />
 
-        <div className="flex flex-col gap-4 items-center">
-          <button className="w-28 px-10 h-10 bg-yellow-500 rounded text-white">Edit</button>
-          <button className="w-28 px-10 h-10 bg-red-500 rounded text-white">Delete</button>
+        <div className="flex flex-col gap-4 items-center justify-between col-span-2 lg:col-span-1">
+          <button className="w-full py-4 bg-black text-white h-full">Edit</button>
+          <button className="w-full py-4 bg-white text-black border h-full border-black">Delete</button>
         </div>
       </div>
     ))}

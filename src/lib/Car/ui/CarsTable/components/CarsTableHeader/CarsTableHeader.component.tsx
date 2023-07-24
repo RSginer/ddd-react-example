@@ -3,5 +3,7 @@ interface CarsTableHeaderProps {
 }
 
 export const CarsTableHeader = ({ label }: CarsTableHeaderProps) => (
-  <div className="flex items-center justify-center font-bold bg-slate-200 p-4">{label}</div>
+  <div className="flex text-ellipsis break-all items-center justify-center font-bold bg-gray-50 p-4 text-xs">
+    {label}
+  </div>
 );

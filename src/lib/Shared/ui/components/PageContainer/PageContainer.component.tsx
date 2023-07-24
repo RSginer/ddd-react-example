@@ -8,7 +8,7 @@ export const PageContainer = ({ header, children }: PropsWithChildren<PageContai
   return (
     <>
       {header}
-      <main className="px-10 py-28">{children}</main>;
+      <main className="px-2 lg:px-10 2xl:px-44 py-28">{children}</main>;
     </>
   );
 };

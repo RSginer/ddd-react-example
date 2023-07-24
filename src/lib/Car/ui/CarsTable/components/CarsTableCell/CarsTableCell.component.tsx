@@ -3,5 +3,5 @@ interface CarsTableCellProps {
 }
 
 export const CarsTableCell = ({ label }: CarsTableCellProps) => (
-  <div className="flex items-center justify-center bg-slate-50">{label}</div>
+  <div className="flex col-span-2 items-center justify-center p-4">{label}</div>
 );
