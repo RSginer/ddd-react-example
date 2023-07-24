@@ -35,4 +35,17 @@ describe('GetCarsService', () => {
     expect(cars).toBe(mockedCars);
     expect(getCarsMock).toHaveBeenCalled();
   });
+
+  it('Should call carsGetter with parametters to fetch cars', async () => {
+    const getCarsService: GetCarsService = new GetCarsService(new GetCarsMockService());
+    const searchQuery = 'Ibiza';
+    const sort = {
+      property: 'name' as keyof Car,
+      order: 'asc' as 'asc' | 'desc',
+    };
+    const cars: Car[] = await getCarsService.getCars(searchQuery, sort);
+
+    expect(cars).toBe(mockedCars);
+    expect(getCarsMock).toHaveBeenCalledWith(searchQuery, sort);
+  });
 });
