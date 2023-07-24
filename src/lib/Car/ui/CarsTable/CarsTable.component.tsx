@@ -4,12 +4,34 @@ import { CarsTableCell } from './components/CarsTableCell/CarsTableCell.componen
 import { CarsTableHeader } from './components/CarsTableHeader/CarsTableHeader.component';
 import { CarsTableHeaderLabel } from './models/CarsTableHeaderLabel.model';
 
+const headerLabels: CarsTableHeaderLabel[] = [
+  {
+    label: 'Image',
+    colSpan: 3,
+  },
+  {
+    label: 'Reg Number',
+    colSpan: 2,
+  },
+  {
+    label: 'Model',
+    colSpan: 2,
+  },
+  {
+    label: 'Brand',
+    colSpan: 2,
+  },
+  {
+    label: 'Actions',
+    colSpan: 1,
+  },
+];
+
 interface CarsTableProps {
   cars: Car[];
-  headerLabels: CarsTableHeaderLabel[];
 }
 
-export const CarsTable = ({ cars, headerLabels }: CarsTableProps) => (
+export const CarsTable = ({ cars }: CarsTableProps) => (
   <div className="grid gap-y-2">
     <div className="lg:grid lg:grid-cols-10 gap-3 mb-3 hidden">
       {headerLabels.map((headerLabel) => (
