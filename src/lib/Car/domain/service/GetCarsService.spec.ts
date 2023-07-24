@@ -2,7 +2,24 @@ import { describe, expect, it, vi } from 'vitest';
 
 import { Car, GetCarsRepository, GetCarsService } from '@Car/Domain';
 
-const mockedCars: Car[] = [{ id: '', name: 'mock', brand: 'mock', pictureUrl: 'http://mock.io' }];
+const mockedCars: Car[] = [
+  {
+    id: 5,
+    name: 'Tarraco',
+    brand: 'SEAT',
+    regNumber: '5237OKH',
+    pictureUrl:
+      'https://www.seat.com/content/dam/public/seat-website/myco/2325/global-header/global-navigation/models/lateral-view-new-seat-tarraco-xperience-dark-camouflage-colour.png',
+    details: {
+      engine: 'TDI 90cv',
+      maxSpeedInKmh: 190,
+      extras: {
+        travelKit: true,
+        lightPack: true,
+      },
+    },
+  },
+];
 
 const getCarsMock = vi.fn(() => Promise.resolve(mockedCars));
 
