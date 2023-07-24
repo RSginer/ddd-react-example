@@ -4,7 +4,7 @@
       "id": 0,
       "name": "Ibiza",
       "brand": "SEAT",
-      "regNumber": "5559JZM",
+      "regNumber": "5259 JZM",
       "pictureUrl": "https://www.seat.com/content/dam/public/seat-website/global-header/global-navigation/models/seat-new-ibiza-pa-desirered.png",
       "details": {
         "engine": "TSI 100 290cv",
@@ -19,7 +19,7 @@
       "id": 1,
       "name": "Arona",
       "brand": "SEAT",
-      "regNumber": "12359JLP",
+      "regNumber": "1359 JLP",
       "pictureUrl": "https://www.seat.com/content/dam/public/seat-website/myco/2325/global-header/global-navigation/models/seat-arona-pa.png",
       "details": {
         "engine": "TSI 100 290cv",
@@ -34,7 +34,7 @@
       "id": 2,
       "name": "Leon",
       "brand": "SEAT",
-      "regNumber": "4789PJH",
+      "regNumber": "4789 PJH",
       "pictureUrl": "https://www.seat.com/content/dam/public/seat-website/global-header/global-navigation/models/new-seat-leon-2020.png",
       "details": {
         "engine": "TSI 100 90cv",
@@ -49,7 +49,7 @@
       "id": 3,
       "name": "Leon Sportstourer",
       "brand": "SEAT",
-      "regNumber": "92375RMH",
+      "regNumber": "9275 RMH",
       "pictureUrl": "https://www.seat.com/content/dam/public/seat-website/global-header/global-navigation/models/new-seat-leon-sportstourer-2020.png",
       "details": {
         "engine": "TDI 90cv",
@@ -64,7 +64,7 @@
       "id": 4,
       "name": "Ateca",
       "brand": "SEAT",
-      "regNumber": "9235RNK",
+      "regNumber": "9235 RNK",
       "pictureUrl": "https://www.seat.com/content/dam/public/seat-website/global-header/global-navigation/models/new-ateca.png",
       "details": {
         "engine": "TDI 90cv",
@@ -79,7 +79,7 @@
       "id": 5,
       "name": "Tarraco",
       "brand": "SEAT",
-      "regNumber": "5237OKH",
+      "regNumber": "5237 OKH",
       "pictureUrl": "https://www.seat.com/content/dam/public/seat-website/myco/2325/global-header/global-navigation/models/lateral-view-new-seat-tarraco-xperience-dark-camouflage-colour.png",
       "details": {
         "engine": "TDI 90cv",
