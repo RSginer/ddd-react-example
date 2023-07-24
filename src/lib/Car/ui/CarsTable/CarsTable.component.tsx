@@ -17,6 +17,7 @@ export const CarsTable = ({ cars, headerLabels, onHeaderClick }: CarsTableProps)
     <div className="lg:grid lg:grid-cols-10 gap-3 mb-3 hidden">
       {headerLabels.map((headerLabel) => (
         <div
+          key={headerLabel.label}
           className={`${headerLabel.isClickable ? 'cursor-pointer' : 'cursor-default'}  lg:block col-span-${
             headerLabel.colSpan
           }`}
@@ -41,8 +42,8 @@ export const CarsTable = ({ cars, headerLabels, onHeaderClick }: CarsTableProps)
         <CarsTableCell label={car.brand} />
 
         <div className="flex flex-col gap-4 items-center justify-between col-span-2 lg:col-span-1">
-          <button className="w-full py-4 bg-black text-white h-full">Edit</button>
-          <button className="w-full py-4 bg-white text-black border h-full border-black">Delete</button>
+          <button className="w-full py-4 bg-black text-white h-full rounded">Edit</button>
+          <button className="w-full py-4 bg-white text-black border h-full border-black rounded">Delete</button>
         </div>
       </div>
     ))}

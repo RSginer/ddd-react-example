@@ -2,7 +2,7 @@ import { MouseEvent } from 'react';
 
 import { useGetCars } from '@Car/Feature';
 import { CarsTable, InputSearch, SortSelect } from '@Car/Ui';
-import { Header, PageContainer } from '@Shared/Ui';
+import { Header, Loader, PageContainer } from '@Shared/Ui';
 
 import { headerLabels } from './headerLabels.const';
 
@@ -16,14 +16,12 @@ export const CarsPage = () => {
 
   return (
     <PageContainer header={<Header />}>
-      {isLoading && <p>Loading...</p>}
+      <InputSearch />
+      <SortSelect />
+      {isLoading && <Loader />}
       {error !== null && !isLoading && <p>Error: {JSON.stringify(error)}</p>}
       {cars && !isLoading && !error && (
-        <>
-          <InputSearch />
-          <SortSelect />
-          <CarsTable onHeaderClick={onHeaderClick} headerLabels={headerLabels} cars={cars} />
-        </>
+        <CarsTable onHeaderClick={onHeaderClick} headerLabels={headerLabels} cars={cars} />
       )}
     </PageContainer>
   );
