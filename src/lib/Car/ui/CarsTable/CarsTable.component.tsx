@@ -1,5 +1,3 @@
-import { MouseEvent } from 'react';
-
 import { Car } from '@Car/Domain';
 
 import { CarsTableCell } from './components/CarsTableCell/CarsTableCell.component';
@@ -8,25 +6,14 @@ import { CarsTableHeaderLabel } from './models/CarsTableHeaderLabel.model';
 
 interface CarsTableProps {
   cars: Car[];
-  onHeaderClick: (ev: MouseEvent, propertyName: string) => void;
   headerLabels: CarsTableHeaderLabel[];
 }
 
-export const CarsTable = ({ cars, headerLabels, onHeaderClick }: CarsTableProps) => (
+export const CarsTable = ({ cars, headerLabels }: CarsTableProps) => (
   <div className="grid gap-y-2">
     <div className="lg:grid lg:grid-cols-10 gap-3 mb-3 hidden">
       {headerLabels.map((headerLabel) => (
-        <div
-          key={headerLabel.label}
-          className={`${headerLabel.isClickable ? 'cursor-pointer' : 'cursor-default'}  lg:block col-span-${
-            headerLabel.colSpan
-          }`}
-          onClick={
-            headerLabel.isClickable && headerLabel.property
-              ? (ev: MouseEvent) => headerLabel.property && onHeaderClick(ev, headerLabel.property)
-              : undefined
-          }
-        >
+        <div key={headerLabel.label} className={`col-span-${headerLabel.colSpan}`}>
           <CarsTableHeader label={headerLabel.label} />
         </div>
       ))}
