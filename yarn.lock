@@ -3341,6 +3341,11 @@ react-is@^18.0.0:
   resolved "https://artifacts.flowable.com:443/artifactory/api/npm/npm-all/react-is/-/react-is-18.2.0.tgz#199431eeaaa2e09f86427efbb4f1473edb47609b"
   integrity sha512-xWGDIW6x921xtzPkhiULtthJHoJvBbF3q26fzloPCK0hsvxtPVelvftw3zjbHWSkR2km9Z+4uxbDDK/6Zw9B8w==
 
+react-license-plate@^1.0.0:
+  version "1.0.0"
+  resolved "https://artifacts.flowable.com:443/artifactory/api/npm/npm-all/react-license-plate/-/react-license-plate-1.0.0.tgz#5a418ffb55bf3fee39ea85ee9857423b0764b678"
+  integrity sha512-ogS7sbknh4GfohfdlQDDTwUwkky8OgDj2nqzLntPdD4BPIGjzfo/+74yfma3jdU5/cu9v+6YA/tZDac5nFi8BQ==
+
 react-query@^3.39.3:
   version "3.39.3"
   resolved "https://artifacts.flowable.com:443/artifactory/api/npm/npm-all/react-query/-/react-query-3.39.3.tgz#4cea7127c6c26bdea2de5fb63e51044330b03f35"

@@ -1,5 +1,5 @@
 interface CarsTableCellProps {
-  label: string;
+  label: string | JSX.Element;
 }
 
 export const CarsTableCell = ({ label }: CarsTableCellProps) => (
