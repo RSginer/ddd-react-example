@@ -4,7 +4,7 @@ export const SortSelect = () => (
       Sort by:
     </label>
     <select id="sort" title="Sort by">
-      <option>Reg Number</option>
+      <option>License plate</option>
       <option>Model</option>
     </select>
   </div>
