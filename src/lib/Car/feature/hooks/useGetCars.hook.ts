@@ -24,7 +24,7 @@ export const useGetCars = ({ searchQuery, sort }: UseGetCarsProps): UseGetCarsRe
   const QUERY_KEY = 'getCars';
   const containerCtx = useContext(ContainerContext);
   const getCarsService = containerCtx.resolve(GET_CARS_SERVICE);
-  const { isLoading, error, data, isSuccess } = useQuery([QUERY_KEY, searchQuery, sort], () =>
+  const { isLoading, error, data, isSuccess } = useQuery([QUERY_KEY, searchQuery, sort], async () =>
     getCarsService.getCars(searchQuery, sort),
   );
 
