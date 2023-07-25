@@ -3,6 +3,14 @@ import { Car, GetCarsRepository } from '@Car/Domain';
 export class GetCarsHttpService implements GetCarsRepository {
   constructor(private apiUrl: string) {}
 
+  getCarById = async (id: number) => {
+    const url = new URL(`${this.apiUrl}/cars/${id}`);
+    const response = await fetch(url);
+    const car = (await response.json()) as Car;
+
+    return car;
+  };
+
   getCars = async (
     searchQuery?: string,
     sort?: {

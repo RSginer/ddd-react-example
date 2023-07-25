@@ -12,4 +12,8 @@ export class GetCarsService {
   ): Promise<Car[]> {
     return this.carsGetter.getCars(searchQuery, sort);
   }
+
+  getCarById(id: string): Promise<Car> {
+    return this.carsGetter.getCarById(id);
+  }
 }

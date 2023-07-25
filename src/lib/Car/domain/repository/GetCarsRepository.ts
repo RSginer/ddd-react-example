@@ -8,4 +8,6 @@ export interface GetCarsRepository {
       property: keyof Car;
     },
   ) => Promise<Car[]>;
+
+  getCarById: (id: string) => Promise<Car>;
 }

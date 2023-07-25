@@ -53,12 +53,8 @@ export const CarsTable = ({ cars }: CarsTableProps) => (
             )
           }
         />
-        <div
-          data-testid="actions"
-          className="flex flex-col gap-4 items-center justify-between col-span-2 lg:col-span-1"
-        >
-          <button className="w-full py-4 bg-black text-white h-full rounded">Edit</button>
-          <button className="w-full py-4 bg-white text-black border h-full border-black rounded">Delete</button>
+        <div data-testid="actions" className="flex flex-col gap-4 items-center justify-center col-span-2 lg:col-span-1">
+          <button className="w-full py-4 bg-white text-black border border-black rounded">Delete</button>
         </div>
       </div>
     ))}

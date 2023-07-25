@@ -25,6 +25,7 @@ const getCarsMock = vi.fn(() => Promise.resolve(mockedCars));
 
 class GetCarsMockService implements GetCarsRepository {
   getCars = getCarsMock;
+  getCarById = (id: number) => Promise.resolve(mockedCars[0]);
 }
 
 describe('GetCarsService', () => {
