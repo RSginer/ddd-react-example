@@ -1,10 +1,10 @@
 import { useContext } from 'react';
-import { useQuery } from 'react-query';
 
 import { Car } from '@Car/Domain';
 import { ContainerContext, GET_CARS_SERVICE } from '@Shared/Infrastructure';
+import { useQuery } from '@tanstack/react-query';
 
-interface UseGetCarsProps {
+export interface UseGetCarsProps {
   searchQuery?: string;
   sort: {
     property: keyof Car;
@@ -13,9 +13,10 @@ interface UseGetCarsProps {
 }
 
 export interface UseGetCarsResult {
+  isSuccess: boolean;
   isLoading: boolean;
   error: unknown;
-  data: Car[];
+  data?: Car[];
   queryKey: string;
 }
 
@@ -23,11 +24,12 @@ export const useGetCars = ({ searchQuery, sort }: UseGetCarsProps): UseGetCarsRe
   const QUERY_KEY = 'getCars';
   const containerCtx = useContext(ContainerContext);
   const getCarsService = containerCtx.resolve(GET_CARS_SERVICE);
-  const { isLoading, error, data } = useQuery([QUERY_KEY, searchQuery, sort], () =>
+  const { isLoading, error, data, isSuccess } = useQuery([QUERY_KEY, searchQuery, sort], () =>
     getCarsService.getCars(searchQuery, sort),
   );
 
   return {
+    isSuccess,
     isLoading,
     error,
     data,

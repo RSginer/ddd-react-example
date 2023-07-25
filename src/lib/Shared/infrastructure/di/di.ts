@@ -19,7 +19,7 @@ export const createDIContainer = () => {
   container.register({
     apiUrl: asValue(API_URL),
     [GET_CARS_SERVICE]: asValue(new GetCarsService(new GetCarsHttpService(API_URL))),
-    [UPDATE_CARS_SERVICE]: asValue(new UpdateCarService(new UpdateCarHttpService())),
+    [UPDATE_CARS_SERVICE]: asValue(new UpdateCarService(new UpdateCarHttpService(API_URL))),
   });
 
   return container;
