@@ -46,11 +46,15 @@ export const CarsTable = ({ cars }: CarsTableProps) => (
     {cars.map((car) => (
       <div className="grid lg:grid-cols-10 gap-3" key={car.id}>
         <div className="flex items-center justify-center col-span-2 lg:col-span-3">
-          <img src={car.pictureUrl} alt={car.name} />
+          <img data-testid="carImage" src={car.pictureUrl} alt={car.name} />
         </div>
-        <CarsTableCell label={<LicensePlate countryCode="ES" plateId={car.regNumber} height={45} />} />
-        <CarsTableCell label={car.name} />
         <CarsTableCell
+          dataTestId="licensePlate"
+          label={<LicensePlate countryCode="ES" plateId={car.regNumber} height={45} />}
+        />
+        <CarsTableCell dataTestId="name" label={car.name} />
+        <CarsTableCell
+          dataTestId="brand"
           label={
             car.brand === 'SEAT' ? (
               <img
@@ -63,7 +67,10 @@ export const CarsTable = ({ cars }: CarsTableProps) => (
             )
           }
         />
-        <div className="flex flex-col gap-4 items-center justify-between col-span-2 lg:col-span-1">
+        <div
+          data-testid="actions"
+          className="flex flex-col gap-4 items-center justify-between col-span-2 lg:col-span-1"
+        >
           <button className="w-full py-4 bg-black text-white h-full rounded">Edit</button>
           <button className="w-full py-4 bg-white text-black border h-full border-black rounded">Delete</button>
         </div>
