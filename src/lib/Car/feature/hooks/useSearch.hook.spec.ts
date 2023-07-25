@@ -2,7 +2,7 @@ import { describe, expect, it } from 'vitest';
 
 import { renderHook } from '@testing-library/react-hooks';
 
-import { useSearch } from '../';
+import { useSearch } from './useSearch.hook';
 
 const search = 'Seat';
 
