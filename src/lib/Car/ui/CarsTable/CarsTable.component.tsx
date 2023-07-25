@@ -34,7 +34,7 @@ interface CarsTableProps {
 }
 
 export const CarsTable = ({ cars }: CarsTableProps) => (
-  <div className="grid gap-y-2">
+  <div data-testid="carsTable" className="grid gap-y-2">
     <div className="lg:grid lg:grid-cols-10 gap-3 mb-3 hidden">
       {headerLabels.map((headerLabel) => (
         <div key={headerLabel.label} className={`col-span-${headerLabel.colSpan}`}>

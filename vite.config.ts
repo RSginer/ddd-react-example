@@ -13,6 +13,7 @@ export default defineConfig({
       '@Car/Infrastructure': path.resolve(__dirname, './src/lib/Car/infrastructure'),
       '@Shared/Infrastructure': path.resolve(__dirname, './src/lib/Shared/infrastructure'),
       '@Shared/Ui': path.resolve(__dirname, './src/lib/Shared/ui'),
+      '@Test': path.resolve(__dirname, './src/test'),
     },
   },
   plugins: [react()],

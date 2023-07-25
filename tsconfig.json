@@ -12,7 +12,8 @@
       "@Car/Ui": ["lib/Car/ui"],
       "@Car/Infrastructure": ["lib/Car/infrastructure"],
       "@Shared/Infrastructure": ["lib/Shared/infrastructure"],
-      "@Shared/Ui": ["lib/Shared/ui"]
+      "@Shared/Ui": ["lib/Shared/ui"],
+      "@Test": ["test"]
     },
     /* Bundler mode */
     "moduleResolution": "bundler",
