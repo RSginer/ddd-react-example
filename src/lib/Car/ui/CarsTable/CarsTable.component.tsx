@@ -4,30 +4,6 @@ import { Car } from '@Car/Domain';
 
 import { CarsTableCell } from './components/CarsTableCell/CarsTableCell.component';
 import { CarsTableHeader } from './components/CarsTableHeader/CarsTableHeader.component';
-import { CarsTableHeaderLabel } from './models/CarsTableHeaderLabel.model';
-
-const headerLabels: CarsTableHeaderLabel[] = [
-  {
-    label: 'Image',
-    colSpan: 3,
-  },
-  {
-    label: 'License plate',
-    colSpan: 2,
-  },
-  {
-    label: 'Model',
-    colSpan: 2,
-  },
-  {
-    label: 'Brand',
-    colSpan: 2,
-  },
-  {
-    label: 'Actions',
-    colSpan: 1,
-  },
-];
 
 interface CarsTableProps {
   cars: Car[];
@@ -35,12 +11,22 @@ interface CarsTableProps {
 
 export const CarsTable = ({ cars }: CarsTableProps) => (
   <div data-testid="carsTable" className="grid gap-y-2">
-    <div className="lg:grid lg:grid-cols-10 gap-3 mb-3 hidden">
-      {headerLabels.map((headerLabel) => (
-        <div key={headerLabel.label} className={`col-span-${headerLabel.colSpan}`}>
-          <CarsTableHeader label={headerLabel.label} />
-        </div>
-      ))}
+    <div className="lg:grid grid-cols-10 gap-3 mb-3 hidden">
+      <div className="lg:col-span-3 col-span-2">
+        <CarsTableHeader label="Image" />
+      </div>
+      <div className="col-span-2">
+        <CarsTableHeader label="License plate" />
+      </div>
+      <div className="col-span-2">
+        <CarsTableHeader label="Model" />
+      </div>
+      <div className="col-span-2">
+        <CarsTableHeader label="Brand" />
+      </div>
+      <div className="col-span-1">
+        <CarsTableHeader label="Actions" />
+      </div>
     </div>
 
     {cars.map((car) => (
