@@ -1,3 +1,4 @@
+export * from './hooks/useGetCar.hook';
 export * from './hooks/useGetCars.hook';
 export * from './hooks/useSearch.hook';
 export * from './hooks/useSort.hook';

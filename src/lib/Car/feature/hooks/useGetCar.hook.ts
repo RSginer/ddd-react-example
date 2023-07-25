@@ -40,6 +40,6 @@ export const useGetCar = ({ id }: UseGetCarProps) => {
     error,
     data,
     isSuccess,
-    queryKey,
+    queryKey: QUERY_KEY,
   };
 };

@@ -1,12 +1,17 @@
-import { describe, expect, it } from 'vitest';
+import { Params } from 'react-router-dom';
+import { describe, expect, it, vi } from 'vitest';
 
 import { createWrapper, GetCarsHttpMockService } from '@Test';
-import { render } from '@testing-library/react';
+import { render, waitFor } from '@testing-library/react';
 
 import { CarPage } from './Car.page';
 
+vi.mock('react-router-dom', () => ({
+  useParams: (): Readonly<Params<string>> => ({ id: '1' }),
+}));
+
 describe('Car page', () => {
-  it('Should render car page', () => {
+  it('Should render car page', async () => {
     const Wrapper = createWrapper(new GetCarsHttpMockService());
     const { getByText } = render(
       <Wrapper>
@@ -14,6 +19,6 @@ describe('Car page', () => {
       </Wrapper>,
     );
 
-    expect(getByText('Car Page')).toBeDefined();
+    await waitFor(() => expect(getByText('Car Page')).toBeDefined());
   });
 });

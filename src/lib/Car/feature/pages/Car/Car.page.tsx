@@ -1,8 +1,7 @@
 import { useParams } from 'react-router-dom';
 
+import { useGetCar } from '@Car/Feature';
 import { Error, Header, Loader, PageContainer } from '@Shared/Ui';
-
-import { useGetCar } from '../../hooks/useGetCar.hook';
 
 export const CarPage = () => {
   const { id } = useParams();
