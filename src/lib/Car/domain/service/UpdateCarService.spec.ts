@@ -19,7 +19,7 @@ const mockedCar: Car = {
   },
 };
 
-const updateCarMock = vi.fn((car: Car) => Promise.resolve(mockedCar));
+const updateCarMock = vi.fn((id: number, car: Car) => Promise.resolve(mockedCar));
 
 class UpdateCarMockService implements UpdateCarRepository {
   updateCar = updateCarMock;
@@ -28,7 +28,7 @@ class UpdateCarMockService implements UpdateCarRepository {
 describe('GetCarsService', () => {
   it('Should call carsGetter to fetch cars', async () => {
     const updateCarService: UpdateCarService = new UpdateCarService(new UpdateCarMockService());
-    await updateCarService.updateCar({
+    await updateCarService.updateCar(5, {
       id: 5,
       name: 'Tarraco',
       brand: 'SEAT',
