@@ -15,7 +15,6 @@ export class GetCarsHttpMockService implements GetCarsRepository {
 }
 
 const responseMock = db.cars;
-
 const searchQuery = '';
 const sort = {
   property: 'regNumber' as keyof Car,
@@ -53,7 +52,9 @@ describe('useGetCars', () => {
     await waitFor(() => result.current.isLoading === false);
 
     expect(result.current.error).toBeNull();
-    expect(result.current.isLoading).toBe(false);
+    expect(result.current.isLoading).toBeFalsy();
     expect(result.current.data).toBe(responseMock);
+    expect(result.current.isSuccess).toBeTruthy();
+    expect(result.current.queryKey).toBe('getCars');
   });
 });
