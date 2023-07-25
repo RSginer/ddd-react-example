@@ -13,12 +13,12 @@ vi.mock('react-router-dom', () => ({
 describe('Car page', () => {
   it('Should render car page', async () => {
     const Wrapper = createWrapper(new GetCarsHttpMockService());
-    const { getByText } = render(
+    const { getByTestId } = render(
       <Wrapper>
         <CarPage />
       </Wrapper>,
     );
 
-    await waitFor(() => expect(getByText('Car Page')).toBeDefined());
+    await waitFor(() => expect(getByTestId('carDetails')).toBeDefined());
   });
 });
