@@ -8,3 +8,14 @@ export interface Car {
   regNumber: string;
   details: CarDetails;
 }
+
+interface CarDetails {
+  engine: string;
+  maxSpeedInKmh: number;
+  extras: CarExtras;
+}
+
+interface CarExtras {
+  travelKit: boolean;
+  lightPack: boolean;
+}

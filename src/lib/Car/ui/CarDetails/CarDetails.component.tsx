@@ -1,12 +1,14 @@
+import { MouseEvent } from 'react';
 import LicensePlate from 'react-license-plate';
 
 import { Car } from '@Car/Domain';
 
 export interface CarDetailsProps {
   car: Car;
+  onBackButtonClick: (e: MouseEvent<HTMLButtonElement>) => void;
 }
 
-export const CarDetails = ({ car }: CarDetailsProps) => {
+export const CarDetails = ({ car, onBackButtonClick }: CarDetailsProps) => {
   return (
     <div className="flex flex-col w-full h-full" data-testid="carDetails">
       <div className="grid grid-cols-1 gap-2 text-xl">
@@ -49,7 +51,9 @@ export const CarDetails = ({ car }: CarDetailsProps) => {
         </div>
       </div>
       <div className="flex items-center w-full justify-center gap-4 mt-10">
-        <button className="w-20 py-4 bg-black text-white h-full rounded">Back</button>
+        <button className="w-20 py-4 bg-black text-white h-full rounded" onClick={onBackButtonClick}>
+          Back
+        </button>
         <button className="w-20 py-4 bg-white text-black border h-full border-black rounded">Save</button>
       </div>
     </div>

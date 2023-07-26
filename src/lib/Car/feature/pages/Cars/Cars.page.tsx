@@ -25,7 +25,7 @@ export const CarsPage = () => {
     setSort({ ...sort, order: e.target.value as 'asc' | 'desc' });
   };
 
-  const onEditCarClick = (e: MouseEvent, car: Car) => {
+  const onEditCarClick = (_e: MouseEvent, car: Car) => {
     navigate(`/car/${car.id}`);
   };
 

@@ -59,10 +59,7 @@ export const CarsTable = ({ cars, onEditCarClick }: CarsTableProps) => (
           data-testid="actions"
           className="flex flex-col gap-4 items-center justify-between col-span-2 lg:col-span-1"
         >
-          <button
-            className="w-full py-4 bg-black hover:text-black hover:bg-gray-100 text-white h-full rounded hover:border hover:border-black"
-            onClick={(e) => onEditCarClick(e, car)}
-          >
+          <button className="w-full py-4 bg-black text-white h-full rounded" onClick={(e) => onEditCarClick(e, car)}>
             Edit
           </button>
           <button className="w-full py-4 bg-white text-black border h-full border-black rounded">Delete</button>
