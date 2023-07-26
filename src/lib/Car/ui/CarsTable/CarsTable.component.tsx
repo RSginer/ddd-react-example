@@ -65,7 +65,7 @@ export const CarsTable = ({ cars, onEditCarClick }: CarsTableProps) => (
             className="w-full py-4 bg-white text-black h-full rounded text-center flex items-center justify-center"
             onClick={(e) => onEditCarClick(e, car)}
           >
-            <FaEdit size={30} />
+            <FaEdit size={20} />
           </button>
         </div>
       </div>
