@@ -1,9 +1,13 @@
-import { describe, expect, it } from 'vitest';
+import { describe, expect, it, vi } from 'vitest';
 
 import { createWrapper, GetCarsHttpMockErrorService, GetCarsHttpMockService } from '@Test';
 import { render, waitFor } from '@testing-library/react';
 
 import { CarsPage } from './Cars.page';
+
+vi.mock('react-router-dom', () => ({
+  useNavigate: vi.fn().mockImplementation((path: string) => path),
+}));
 
 describe('Cars page', () => {
   it('Should render cars page with cars table', async () => {

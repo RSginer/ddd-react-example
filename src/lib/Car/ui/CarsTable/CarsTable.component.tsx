@@ -1,3 +1,4 @@
+import { MouseEvent } from 'react';
 import LicensePlate from 'react-license-plate';
 
 import { Car } from '@Car/Domain';
@@ -7,9 +8,10 @@ import { CarsTableHeader } from './components/CarsTableHeader/CarsTableHeader.co
 
 interface CarsTableProps {
   cars: Car[];
+  onEditCarClick: (e: MouseEvent, car: Car) => void;
 }
 
-export const CarsTable = ({ cars }: CarsTableProps) => (
+export const CarsTable = ({ cars, onEditCarClick }: CarsTableProps) => (
   <div data-testid="carsTable" className="grid gap-y-2">
     <div className="lg:grid grid-cols-10 gap-3 mb-3 hidden">
       <div className="lg:col-span-3 col-span-2">
@@ -57,7 +59,12 @@ export const CarsTable = ({ cars }: CarsTableProps) => (
           data-testid="actions"
           className="flex flex-col gap-4 items-center justify-between col-span-2 lg:col-span-1"
         >
-          <button className="w-full py-4 bg-black text-white h-full rounded">Edit</button>
+          <button
+            className="w-full py-4 bg-black hover:text-black hover:bg-gray-100 text-white h-full rounded hover:border hover:border-black"
+            onClick={(e) => onEditCarClick(e, car)}
+          >
+            Edit
+          </button>
           <button className="w-full py-4 bg-white text-black border h-full border-black rounded">Delete</button>
         </div>
       </div>
