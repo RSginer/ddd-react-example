@@ -1,4 +1,5 @@
 import { MouseEvent } from 'react';
+import { FaEdit } from 'react-icons/fa';
 import LicensePlate from 'react-license-plate';
 
 import { Car } from '@Car/Domain';
@@ -59,10 +60,13 @@ export const CarsTable = ({ cars, onEditCarClick }: CarsTableProps) => (
           data-testid="actions"
           className="flex flex-col gap-4 items-center justify-between col-span-2 lg:col-span-1"
         >
-          <button className="w-full py-4 bg-black text-white h-full rounded" onClick={(e) => onEditCarClick(e, car)}>
-            Edit
+          <button
+            title="Edit"
+            className="w-full py-4 bg-white text-black h-full rounded text-center flex items-center justify-center"
+            onClick={(e) => onEditCarClick(e, car)}
+          >
+            <FaEdit size={30} />
           </button>
-          <button className="w-full py-4 bg-white text-black border h-full border-black rounded">Delete</button>
         </div>
       </div>
     ))}

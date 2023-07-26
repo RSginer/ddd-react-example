@@ -1,4 +1,5 @@
 import { MouseEvent, useState } from 'react';
+import { FaArrowLeft, FaSave } from 'react-icons/fa';
 import LicensePlate from 'react-license-plate';
 
 import { Car } from '@Car/Domain';
@@ -123,15 +124,20 @@ export const CarDetails = ({ car, onBackButtonClick, onSave }: CarDetailsProps) 
         </div>
       </div>
       <div className="flex items-center w-full justify-center gap-4 mt-10">
-        <button className="w-20 py-4 bg-black text-white h-full rounded" onClick={onBackButtonClick}>
-          Back
+        <button
+          title="back"
+          className="flex items-center justify-center w-20 py-4 bg-black text-white h-full rounded"
+          onClick={onBackButtonClick}
+        >
+          <FaArrowLeft size={20} />
         </button>
         <button
+          title="Save"
           disabled={JSON.stringify(updatedCar) === JSON.stringify(car)}
-          className="w-20 py-4 bg-white text-black disabled:bg-gray-300 disabled:border-gray disabled:text-white disabled:cursor-not-allowed border h-full border-black rounded"
+          className="w-20 flex items-center justify-center py-4 bg-white text-black disabled:bg-gray-300 disabled:border-gray disabled:text-white disabled:cursor-not-allowed border h-full border-black rounded"
           onClick={() => onSave(updatedCar)}
         >
-          Save
+          <FaSave size={20} />
         </button>
       </div>
     </div>
