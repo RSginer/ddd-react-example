@@ -23,8 +23,8 @@ export const CarPage = () => {
 
   useEffect(() => {
     if (isUpdateSuccess) {
-      toast.info(`Car updated!`, {
-        position: 'top-center',
+      toast.success(`Car updated!`, {
+        position: 'bottom-right',
         autoClose: 5000,
         hideProgressBar: true,
         closeOnClick: true,
