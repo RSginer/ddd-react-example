@@ -1,3 +1,4 @@
+export * from './components/CarDetails/CarDetails.component';
 export * from './hooks/useGetCar.hook';
 export * from './hooks/useGetCars.hook';
 export * from './hooks/useSearch.hook';

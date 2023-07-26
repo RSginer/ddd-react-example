@@ -1,7 +1,7 @@
 import { useNavigate, useParams } from 'react-router-dom';
 
-import { useGetCar } from '@Car/Feature';
-import { CarDetails } from '@Car/Ui';
+import { Car } from '@Car/Domain';
+import { CarDetails, useGetCar } from '@Car/Feature';
 import { Error, Header, Loader, PageContainer } from '@Shared/Ui';
 
 export const CarPage = () => {
@@ -13,11 +13,15 @@ export const CarPage = () => {
     navigate('/');
   };
 
+  const onSave = (car: Car) => {
+    console.log(car);
+  };
+
   return (
     <PageContainer header={<Header />}>
       {isLoading && <Loader />}
       {!isLoading && error !== null && <Error />}
-      {!isLoading && !error && car && <CarDetails car={car} onBackButtonClick={onBackButtonClick} />}
+      {!isLoading && !error && car && <CarDetails car={car} onBackButtonClick={onBackButtonClick} onSave={onSave} />}
     </PageContainer>
   );
 };
