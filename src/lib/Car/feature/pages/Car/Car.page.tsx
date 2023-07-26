@@ -39,7 +39,7 @@ export const CarPage = () => {
   useEffect(() => {
     if (isUpdateError) {
       toast.error(`Car update error!`, {
-        position: 'top-center',
+        position: 'bottom-right',
         autoClose: 5000,
         hideProgressBar: true,
         closeOnClick: true,
