@@ -15,7 +15,7 @@ yarn server:start
 ## 3. Run app
 
 ```bash
-yarn dev
+yarn preview
 ```
 
 go to <http://localhost:5173>
