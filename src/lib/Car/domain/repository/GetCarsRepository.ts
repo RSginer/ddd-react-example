@@ -9,5 +9,5 @@ export interface GetCarsRepository {
     },
   ) => Promise<Car[]>;
 
-  getCarById: (id: string) => Promise<Car>;
+  getCarById: (id: number) => Promise<Car>;
 }

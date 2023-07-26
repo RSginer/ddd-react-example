@@ -1,21 +1,18 @@
 import { Car, UpdateCarRepository } from '@Car/Domain';
 
 export class UpdateCarHttpService implements UpdateCarRepository {
-  updateCar = (id: number, car: Car) =>
-    Promise.resolve({
-      id: 0,
-      name: 'Ibiza',
-      brand: 'SEAT',
-      regNumber: '5259 JZM',
-      pictureUrl:
-        'https://www.seat.com/content/dam/public/seat-website/global-header/global-navigation/models/seat-new-ibiza-pa-desirered.png',
-      details: {
-        engine: 'TSI 100 290cv',
-        maxSpeedInKmh: 300,
-        extras: {
-          travelKit: true,
-          lightPack: false,
-        },
-      },
+  constructor(private apiUrl: string) {}
+
+  updateCar = async (id: number, car: Car) => {
+    console.log(car);
+
+    const response = await fetch(`${this.apiUrl}/cars/${id}`, {
+      method: 'PATCH',
+      headers: { 'Content-type': 'application/json' },
+      body: JSON.stringify({ ...car }),
     });
+    const updatedCar = (await response.json()) as Car;
+
+    return updatedCar;
+  };
 }

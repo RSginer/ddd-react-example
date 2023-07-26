@@ -25,14 +25,14 @@
         "engine": "TSI 100 290cv",
         "maxSpeedInKmh": 300,
         "extras": {
-          "travelKit": false,
+          "travelKit": true,
           "lightPack": true
         }
       }
     },
     {
       "id": 2,
-      "name": "Leon",
+      "name": "Leoon",
       "brand": "SEAT",
       "regNumber": "4789 PJH",
       "pictureUrl": "https://www.seat.com/content/dam/public/seat-website/global-header/global-navigation/models/new-seat-leon-2020.png",
@@ -77,7 +77,7 @@
     },
     {
       "id": 5,
-      "name": "Tarraco",
+      "name": "Tarraaco",
       "brand": "SEAT",
       "regNumber": "5237 OKH",
       "pictureUrl": "https://www.seat.com/content/dam/public/seat-website/myco/2325/global-header/global-navigation/models/lateral-view-new-seat-tarraco-xperience-dark-camouflage-colour.png",

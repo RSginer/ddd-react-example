@@ -22,7 +22,7 @@ export const useGetCar = ({ id }: UseGetCarProps) => {
   const getCarsService = containerCtx.resolve(GET_CARS_SERVICE);
   const { isLoading, error, data, isSuccess } = useQuery(
     [QUERY_KEY, id],
-    async () => id && getCarsService.getCarById(id),
+    async () => id && getCarsService.getCarById(parseInt(id)),
   );
 
   if (!id) {

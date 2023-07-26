@@ -13,7 +13,7 @@ export class GetCarsService {
     return this.carsGetter.getCars(searchQuery, sort);
   }
 
-  getCarById(id: string): Promise<Car> {
+  getCarById(id: number): Promise<Car> {
     return this.carsGetter.getCarById(id);
   }
 }
