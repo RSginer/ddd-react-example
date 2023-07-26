@@ -7,10 +7,9 @@ export interface CarDetailsProps {
   car: Car;
   onBackButtonClick: (e: MouseEvent<HTMLButtonElement>) => void;
   onSave: (car: Car) => void;
-  isLoading: boolean;
 }
 
-export const CarDetails = ({ car, onBackButtonClick, onSave, isLoading }: CarDetailsProps) => {
+export const CarDetails = ({ car, onBackButtonClick, onSave }: CarDetailsProps) => {
   const [updatedCar, setUpdatedCar] = useState<Car>(car);
 
   return (
@@ -129,10 +128,10 @@ export const CarDetails = ({ car, onBackButtonClick, onSave, isLoading }: CarDet
         </button>
         <button
           disabled={JSON.stringify(updatedCar) === JSON.stringify(car)}
-          className="w-20 py-4 bg-white text-black disabled:cursor-not-allowed border h-full border-black rounded"
+          className="w-20 py-4 bg-white text-black disabled:bg-gray-300 disabled:border-gray disabled:text-white disabled:cursor-not-allowed border h-full border-black rounded"
           onClick={() => onSave(updatedCar)}
         >
-          {isLoading ? 'Saving...' : 'Save'}
+          Save
         </button>
       </div>
     </div>

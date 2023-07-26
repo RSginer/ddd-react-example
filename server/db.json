@@ -22,7 +22,7 @@
       "regNumber": "1359 JLP",
       "pictureUrl": "https://www.seat.com/content/dam/public/seat-website/myco/2325/global-header/global-navigation/models/seat-arona-pa.png",
       "details": {
-        "engine": "TSI 100 290cv",
+        "engine": "TSI 100 2900cv",
         "maxSpeedInKmh": 300,
         "extras": {
           "travelKit": true,
@@ -32,7 +32,7 @@
     },
     {
       "id": 2,
-      "name": "Leoon",
+      "name": "Leon",
       "brand": "SEAT",
       "regNumber": "4789 PJH",
       "pictureUrl": "https://www.seat.com/content/dam/public/seat-website/global-header/global-navigation/models/new-seat-leon-2020.png",

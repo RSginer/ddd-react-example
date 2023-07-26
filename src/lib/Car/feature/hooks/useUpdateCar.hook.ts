@@ -24,6 +24,7 @@ export const useUpdateCar = ({ id, updateQueryKey }: UseUpdateCarProps) => {
   return {
     updateCar: mutation.mutate,
     isLoading: mutation.isLoading,
-    error: mutation.error,
+    isError: mutation.isError,
+    isSuccess: mutation.isSuccess,
   };
 };
