@@ -1,5 +1,3 @@
-import { CarDetails } from './CarDetails';
-
 export interface Car {
   id: number;
   name: string;

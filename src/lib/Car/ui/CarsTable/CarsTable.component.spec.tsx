@@ -1,4 +1,4 @@
-import { describe, expect, it } from 'vitest';
+import { describe, expect, it, vi } from 'vitest';
 
 import { render } from '@testing-library/react';
 
@@ -7,7 +7,7 @@ import { CarsTable } from './CarsTable.component';
 
 describe('CarsTable', () => {
   it('Should render the cars table', () => {
-    const { getByText, getAllByTestId } = render(<CarsTable cars={db.cars} />);
+    const { getByText, getAllByTestId } = render(<CarsTable onEditCarClick={vi.fn()} cars={db.cars} />);
 
     // Header
     const imageHader = getByText('Image');

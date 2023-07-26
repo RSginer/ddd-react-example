@@ -19,7 +19,7 @@ const mockedCar: Car = {
   },
 };
 
-const updateCarMock = vi.fn((id: number, car: Car) => Promise.resolve(mockedCar));
+const updateCarMock = vi.fn(() => Promise.resolve(mockedCar));
 
 class UpdateCarMockService implements UpdateCarRepository {
   updateCar = updateCarMock;
