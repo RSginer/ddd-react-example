@@ -14,7 +14,13 @@ yarn install
 yarn server:start
 ```
 
-## 3. Run app
+## 3. Build
+
+```bash
+yarn build
+```
+
+## 4. Run app
 
 ```bash
 yarn preview
@@ -34,6 +40,6 @@ yarn test
 yarn coverage
 ```
 
-### Architecture
+## Architecture
 
 The architecture used is based on the DDD approach explained on this talk: <https://www.youtube.com/watch?v=N1JZNHep8YQ>
