@@ -18,4 +18,16 @@ yarn server:start
 yarn preview
 ```
 
-go to <http://localhost:5173>
+go to <http://localhost:4173>
+
+## Test
+
+```bash
+yarn test
+```
+
+## Coverage report
+
+```bash
+yarn coverage
+```
