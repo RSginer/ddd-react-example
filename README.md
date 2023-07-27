@@ -31,3 +31,7 @@ yarn test
 ```bash
 yarn coverage
 ```
+
+### Architecture
+
+The architecture used is based on the DDD approach explained on this talk: <https://www.youtube.com/watch?v=N1JZNHep8YQ>
