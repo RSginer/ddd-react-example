@@ -25,14 +25,14 @@
         "engine": "TSI 100 2900cv",
         "maxSpeedInKmh": 300,
         "extras": {
-          "travelKit": true,
-          "lightPack": false
+          "travelKit": false,
+          "lightPack": true
         }
       }
     },
     {
       "id": 2,
-      "name": "Leon",
+      "name": "Leonn",
       "brand": "SEAT",
       "regNumber": "4789 PJH",
       "pictureUrl": "https://www.seat.com/content/dam/public/seat-website/global-header/global-navigation/models/new-seat-leon-2020.png",

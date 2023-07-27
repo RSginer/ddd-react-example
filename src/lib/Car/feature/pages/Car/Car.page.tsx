@@ -2,13 +2,11 @@ import 'react-toastify/dist/ReactToastify.css';
 
 import { useEffect } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
-import { ToastContainer, toast } from 'react-toastify';
+import { toast, ToastContainer } from 'react-toastify';
 
 import { Car } from '@Car/Domain';
-import { CarDetails, useGetCar } from '@Car/Feature';
+import { CarDetails, useGetCar, useUpdateCar } from '@Car/Feature';
 import { Error, Header, Loader, PageContainer } from '@Shared/Ui';
-
-import { useUpdateCar } from '../../hooks/useUpdateCar.hook';
 
 export const CarPage = () => {
   const { id } = useParams();
