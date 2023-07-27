@@ -26,7 +26,7 @@ yarn build
 yarn preview
 ```
 
-go to <http://localhost:4173>
+go to <http://localhost:8080>
 
 ## Test
 

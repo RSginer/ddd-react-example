@@ -7,7 +7,7 @@
     "dev": "vite",
     "build": "tsc && vite build",
     "lint": "eslint src --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
-    "preview": "vite preview",
+    "preview": "vite preview --port 8080",
     "server:start": "json-server --watch server/db.json",
     "test": "vitest --config vitest.config.ts",
     "coverage": "vitest --config vitest.config.ts run --coverage"
