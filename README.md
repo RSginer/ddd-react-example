@@ -1,6 +1,6 @@
 # SeatCode Rubén Soler
 
-[SeatCode Technical Test](https://i.ibb.co/bRPrCHZ/Captura-de-Pantalla-2023-07-27-a-las-10-27-20.png)
+![SeatCode Technical Test](https://i.ibb.co/bRPrCHZ/Captura-de-Pantalla-2023-07-27-a-las-10-27-20.png)
 
 ## 1. Install
 
