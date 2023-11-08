@@ -1,6 +1,6 @@
 # DDD React Example
 
-![DDD React](https://i.ibb.co/bRPrCHZ/Captura-de-Pantalla-2023-07-27-a-las-10-27-20.png)
+![DDD React](https://i.ibb.co/HpxwVJj/ezgif-1-23460ea87c.gif)
 
 ## 1. Install
 

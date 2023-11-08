@@ -32,7 +32,7 @@
     },
     {
       "id": 2,
-      "name": "Leonn",
+      "name": "Leon",
       "brand": "SEAT",
       "regNumber": "4789 PJH",
       "pictureUrl": "https://www.seat.com/content/dam/public/seat-website/global-header/global-navigation/models/new-seat-leon-2020.png",
@@ -41,7 +41,7 @@
         "maxSpeedInKmh": 180,
         "extras": {
           "travelKit": true,
-          "lightPack": false
+          "lightPack": true
         }
       }
     },
